@@ -1,0 +1,78 @@
+@import 'courses';
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  justify-content: space-between;
+  margin: 10px;
+  min-width: 390px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  border: 10px solid $light;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  @include tablet {
+    min-width: 300px;
+  }
+  @include mobile {
+    min-width: auto;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+  &__price {
+    background-color: $secondary;
+    padding: 10px 20px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    top: -30px;
+  }
+
+  &__content {
+    padding: 10px;
+    &--center {
+      text-align: center;
+    }
+  }
+  &__title {
+    font-family: $heading-font;
+    font-size: 20px;
+    color: $primary;
+    line-height: 26px;
+    padding: 10px 15px;
+    margin-top: -20px;
+  }
+
+  &__text {
+    line-height: 22px;
+    padding: 5px 15px;
+  }
+  &__footer {
+    padding: 15px;
+    line-height: 18px;
+    border-top: 1px solid #ddd;
+    &--center {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
